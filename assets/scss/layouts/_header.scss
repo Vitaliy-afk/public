@@ -1,0 +1,136 @@
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+	z-index: 1000;
+    padding: 33px 0 0 0;
+    
+    .container {
+       
+       
+    }
+    .top-nav {
+        display: flex;
+        align-items: center;
+        padding: 5px 0 9px 0;
+        .logo {
+            padding-right: 262px;
+            align-items: center;
+            display: flex;
+            min-height: 25px;
+            font-size: 20px;
+            
+        }
+        .nav-list {
+            @extend %listreset;
+            @include media ('>640px'){
+               display: flex;
+               flex-wrap: wrap;
+            }
+            > li {
+                &:not(:last-child){
+                    padding-right: 39px;
+                    // text-align: center;
+                }
+                &:hover {
+                    .submenu {
+                        opacity: 1;
+                        visibility: visible;
+                        background-color: #48689a;
+                    }
+                    a:not(:only-child) {
+                        &:after {
+                            transform: rotate(-90deg);
+                        }
+                    }
+                    
+                }
+                a {
+                    text-decoration: none;
+                    color: $black;
+                    font-size: 13px;
+                    position: relative;
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 19px;
+                    text-align: center;
+                    // padding-right: 44px;
+                    // @include media ('<640px'){
+                    //     font-size: 16px;
+                    // }
+                }
+                a:not(:only-child) {
+                    &:after {
+                        content: '';
+                        width: 1em;
+                        height: 1em;
+                        background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' width='448' height='448' viewBox='0 0 448 448'%3E%3Cpath fill='black' d='M420.75 202l-185.5 185.25c-6.25 6.25-16.25 6.25-22.5 0l-185.5-185.25c-6.25-6.25-6.25-16.5 0-22.75l41.5-41.25c6.25-6.25 16.25-6.25 22.5 0l132.75 132.75 132.75-132.75c6.25-6.25 16.25-6.25 22.5 0l41.5 41.25c6.25 6.25 6.25 16.5 0 22.75z'%3E%3C/path%3E%3C/svg%3E%0A");
+                        background-size: 1em 1em;
+                        background-repeat: no-repeat;
+                        background-position: 50% 50%;
+                        display: inline-block;
+                        transform: rotate(0deg);
+                        transition: transform .9s ease-in-out;
+                        position: absolute;
+                        font-size: 11px;
+                        top: 4px;
+                        right: -17px;
+                        
+                    }
+                }
+            }
+        }
+       
+        .login {
+            @extend %listreset;
+            display: flex;
+            margin-left: auto;
+            align-items: center;
+            li {
+                a {
+                    text-decoration: none;
+                    font-size: 14px;
+                    color: black;
+                }
+                &:not(:last-child){
+                    padding-right: 44px;
+                    text-align: center;
+                    
+                }
+                &:nth-child(2){
+                    a {
+                        background: #4F46BA;
+                        padding: 16px 34px 14px 31px;
+                        border-radius: 10px;
+                        color: white;
+                        transition: background-color 0.3s ease-in-out;
+                        &:hover {
+                            background: #3b31ad;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+.submenu {
+    padding: 5px;
+    @extend %listreset;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #48689a;
+    transition: opacity .27s ease-in-out, visibility .27s ease-in-out;
+    box-shadow: 0px 0px 5px rgba(12, 43, 34, 1);
+    top: 60px;
+    @include media('<1024px'){
+        top: 5px;
+        visibility: visible;
+        right: -16%;
+    }
+}
+

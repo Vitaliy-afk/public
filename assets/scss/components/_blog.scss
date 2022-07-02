@@ -1,0 +1,158 @@
+.blog {
+    padding: 0 0 88px 0;
+    .container {
+        max-width: 1124px;
+        .heading {
+            @extend %listreset;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 50px;
+
+            li {
+              
+                h1 {
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 38px;
+                    line-height: 50px;
+                    letter-spacing: -0.03em;
+                    color: #000000;
+                    margin: 0;
+                }
+                .blog-primary {
+                    text-decoration: none;
+                    text-align: center;
+                    color: #DEE1E6;
+                    
+
+                }
+                
+            }
+            li + li {
+                background: #3734A9;
+                border-radius: 10px;
+                padding: 23px 22px 16px 27px;
+                text-align: center;
+                display: inline-block;
+                transition: background-color 0.5s ease;
+                
+            }
+        }
+        .blog-grid {
+            .grid-row {
+                @extend %listreset;
+                display: flex;
+                margin: 0 -15px;
+                flex-wrap: wrap;
+                .grid{
+                    padding: 0 15px;
+                    flex: 0 0 33.33%;
+                    max-width: 33.33%;
+                    &.left, &.center {
+                        figure {
+                            width: 341px;
+                            height: 245px; 
+                            margin-bottom: 10px;
+                            img {
+                                max-width: 100%;
+                            }
+                            
+                        }
+                       ul {
+                           @extend %listreset;
+                           display: flex;
+                           padding-bottom: 10px;
+                           li {
+                                padding-right: 10px;
+                                font-family: 'Gilroy-SemiBold';
+                                font-size: 17px;
+                                line-height: 30px;
+                                letter-spacing: -0.02em;
+                                color: #64607D;
+                           }
+
+                       }
+                       > h4 {
+                            font-family: "Manrope", sans-serif;
+                            font-style: normal;
+                            font-weight: 800;
+                            font-size: 18px;
+                            line-height: 33px;
+                            letter-spacing: -0.03em;
+                            color: #000000;
+                            padding-bottom: 10px;
+                        }
+                        div {
+                            font-family: "Manrope";
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 15px;
+                            line-height: 25px;
+                            letter-spacing: -0.04em;
+                            color: #64607D;
+                            p {
+
+                            }
+                        }
+
+                    }
+                    &.right {
+                        ul {
+                            @extend %listreset;
+                            display: flex;
+                            flex-direction: column;
+                            li:not(:first-child){
+                                padding-top: 20px;
+                            }
+                            li {
+                                display: flex;
+                                padding-bottom: 25px;
+                                border-bottom: 2px solid #E6E6E6;
+                                .grid-date {
+                                   li {
+                                        padding: 0;
+                                        border-bottom: none;
+                                        padding-right: 10px;
+                                        font-family: "Gilroy-SemiBold";
+                                        font-size: 17px;
+                                        letter-spacing: -0.02em;
+                                        color: #64607D;
+                                   }
+                                }
+                                .grid-text {
+                                    h4{
+                                        font-family: "Manrope";
+                                        font-style: normal;
+                                        font-weight: 800;
+                                        font-size: 17px;
+                                        line-height: 28px;
+                                        letter-spacing: -0.05em;
+                                        color: #000000;
+                                    }
+                                }
+                                
+                              figure {
+                                    width: 100px;
+                                    height: 63px;
+                                    margin-right: 15px;
+                                  img {
+                                      max-width: 100%;
+                                    }
+                                }
+                                ul {
+                                    display: flex;
+                                    flex-direction: row;
+                                    padding-bottom: px;
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

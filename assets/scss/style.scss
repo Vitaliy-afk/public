@@ -1,0 +1,46 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&family=Poppins:wght@400;600&display=swap');
+@import "./vendors/include-media";
+@import "./base/variables";
+@import "./vendors/fonts";
+@import "./vendors/normalize";
+@import "./base/mixins";
+
+@import "./base/breakpoints";
+
+
+@import "./vendors/slick";
+@import "./vendors/slider";
+
+@import "./base/forms";
+@import "./base/functions";
+@import "./base/helpers";
+
+
+@import "./layouts/common";
+@import "./layouts/header";
+@import "./layouts/burger";
+@import "./layouts/footer";
+
+
+@import "./components/above-fold";
+@import "./components/companies";
+@import "./components/about-info";
+@import "./components/process";
+@import "./components/box";
+@import "./components/content";
+@import "./components/group";
+@import "./components/group-sec";
+@import "./components/stats";
+@import "./components/blog";
+@import "./components/l-form";
+
+
+
+
+
+
+
+
+
